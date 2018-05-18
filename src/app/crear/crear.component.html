@@ -1,0 +1,69 @@
+<div class="card card-body bg-light">
+  <span>
+    <a routerLink="/lugares" class="elemento">Lugares</a> / Crear lugar</span>
+</div>
+<div class="col-md-4 offset-md-4 logo" style="padding-top: 20px; text-align: center">
+  <img src="../../assets/logo.png" width="250px">
+  <h1 class="card-title" style="color: white"> Nuevo negocio! ♥</h1>
+  <h2 class="card-subtitle mb-2 " style="color:rgba(245, 245, 18, 0.575)">PlatziSquare</h2>
+</div>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 formulario">
+      <div class="container">
+        <label>
+          <strong>Nombre</strong>
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="lugar.nombre" />
+        <label>
+          <strong>Cercania</strong>
+        </label>
+        <input type="number" class="form-control" [(ngModel)]="lugar.cercania" />
+        <label>
+          <strong>Distancia</strong>
+        </label>
+        <input type="number" class="form-control" [(ngModel)]="lugar.distancia" />
+        <label>
+          <strong>Descripción</strong>
+        </label>
+        <textarea class="form-control" [(ngModel)]="lugar.description"></textarea>
+        <label>
+          <strong>Plan</strong>
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="lugar.plan" />
+        <br>
+        <h3>Datos de dirección</h3>
+        <label>
+          <strong>Calle y numero</strong>
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="lugar.calle" />
+        <label>
+          <strong>Ciudad</strong>
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="lugar.ciudad" />
+        <label>
+          <strong>Pais</strong>
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="lugar.pais" />
+        <hr />
+        <div class="row">
+          <div class="col-md-2 ">
+            <a class="btn btn-dark" routerLink='/lugares'>Cancelar</a>
+          </div>
+          <div class="col-md-2 offset-md-8">
+            <a class="btn btn-success" (click)="guardarLugar()">Enviar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mapaCrear">
+      <div class="card mapa2 ">
+
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+</div>

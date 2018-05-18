@@ -1,0 +1,47 @@
+<div class="card card-body bg-light">
+  <span>
+    <a routerLink="/lugares" class="elemento">Lugares</a> / contacto</span>
+</div>
+<div class="contenedor">
+  <br>
+  <div class="row">
+    <div class="col-md-4 logo">
+      <img src="../../assets/logo.png" width="250px">
+      <h1 class="card-title" style="color: white">Contactanos! ♥</h1>
+    <h2 class="card-subtitle mb-2 " style="color:rgba(201, 201, 192, 0.575)">PlatziSquare</h2>
+    </div>
+    <div class="col-md-4 formulario">
+      <div class="container">
+        <label>
+          <strong>Nombre</strong>
+        </label>
+        <input type="text" class="form-control" />
+        <label>
+          <strong>Correo</strong>
+        </label>
+        <input type="email" class="form-control" />
+        <label>
+          <strong>Mensaje</strong>
+        </label>
+        <textarea class="form-control"></textarea>
+        <hr />
+        <div class="row">
+          <div class="col-md-2">
+            <a class="btn btn-light">Enviar</a>
+          </div>
+          <div class="col-md-4 offset-md-6">
+            <a class="btn btn-dark" routerLink='/lugares'>Cancelar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mapa ">
+      <div class="card mapa2 "  >
+
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+</div>
